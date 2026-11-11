@@ -1,0 +1,14 @@
+{
+  "name": "@emp/protocol",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "EMP JSON-RPC protocol types. Generated from crates/emp-protocol via ts-rs; no runtime dependencies.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  }
+}

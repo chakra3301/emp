@@ -1,0 +1,24 @@
+{
+  "name": "@emp/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "EMP desktop host: EMP.app (Tauri 2, src-tauri/) and the Vite dev host on 127.0.0.1:5174.",
+  "dependencies": {
+    "@emp/client": "0.1.0",
+    "@emp/ui": "0.1.0",
+    "@tauri-apps/api": "^2.12.4",
+    "@tauri-apps/plugin-notification": "^2.7.0",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.node.json",
+    "build": "vite build",
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.3"
+  }
+}

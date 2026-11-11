@@ -1,0 +1,42 @@
+{"id": "s1", "type": "response", "command": "get_state", "success": true, "data": {"sessionId": "01a155c3-a6af-76ec-890b-15f13708bae9", "thinkingLevel": "high", "isStreaming": false}}
+{"id": "p1", "type": "response", "command": "prompt", "success": true, "data": {"disposition": "started"}}
+{"type": "agent_start"}
+{"type": "turn_start"}
+{"type": "message_start", "message": {"role": "user", "content": [{"type": "text", "text": "Run the shell command `echo hi` with your bash tool, then reply with the single word: pong"}], "timestamp": 1792440250170}}
+{"type": "message_end", "message": {"role": "user", "content": [{"type": "text", "text": "Run the shell command `echo hi` with your bash tool, then reply with the single word: pong"}], "timestamp": 1792440250170}}
+{"type": "message_start", "message": {"role": "assistant", "content": [{"type": "thinking", "thinking": "", "index": 0}], "api": "anthropic-messages", "provider": "anthropic", "model": "claude-opus-4-8", "stopReason": "pending", "timestamp": 1792440250192, "responseId": "msg_011CgCCGW83YMCvRLBxK9s6Z"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_start", "contentIndex": 0}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_delta", "contentIndex": 0, "delta": "This"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_delta", "contentIndex": 0, "delta": " is sim"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_delta", "contentIndex": 0, "delta": "ple - I'll run"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_delta", "contentIndex": 0, "delta": " ech"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_delta", "contentIndex": 0, "delta": "o hi"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_delta", "contentIndex": 0, "delta": " and then reply p"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_delta", "contentIndex": 0, "delta": "ong."}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_delta", "contentIndex": 0, "delta": "\n\n"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "thinking_end", "contentIndex": 0, "content": "This is simple - I'll run echo hi and then reply pong.\n\n"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "toolcall_start", "contentIndex": 1, "id": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "toolName": "bash"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "toolcall_delta", "contentIndex": 1, "delta": ""}}
+{"type": "message_update", "assistantMessageEvent": {"type": "toolcall_delta", "contentIndex": 1, "delta": "{\"command\": \"ech"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "toolcall_delta", "contentIndex": 1, "delta": "o hi"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "toolcall_delta", "contentIndex": 1, "delta": "\", \"timeout\": 10"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "toolcall_delta", "contentIndex": 1, "delta": "}"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "toolcall_end", "contentIndex": 1, "toolCall": {"type": "toolCall", "id": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "name": "bash", "arguments": {"command": "echo hi", "timeout": 10}}}}
+{"type": "message_end", "message": {"role": "assistant", "content": [{"type": "thinking", "thinking": "This is simple - I'll run echo hi and then reply pong.\n\n"}, {"type": "toolCall", "id": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "name": "bash", "arguments": {"command": "echo hi", "timeout": 10}}], "api": "anthropic-messages", "provider": "anthropic", "model": "claude-opus-4-8", "stopReason": "toolUse", "timestamp": 1792440250192, "responseId": "msg_011CgCCGW83YMCvRLBxK9s6Z", "rawStopReason": "tool_use", "durationMs": 2672, "thinkingLevel": "high"}}
+{"type": "tool_execution_start", "toolCallId": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "toolName": "bash", "args": {"command": "echo hi", "timeout": 10}}
+{"type": "tool_execution_update", "toolCallId": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "toolName": "bash", "args": {"command": "echo hi", "timeout": 10}, "partialResult": {"content": []}}
+{"type": "tool_execution_update", "toolCallId": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "toolName": "bash", "args": {"command": "echo hi", "timeout": 10}, "partialResult": {"content": [{"type": "text", "text": "hi\n"}], "details": {}}}
+{"type": "tool_execution_end", "toolCallId": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "toolName": "bash", "result": {"content": [{"type": "text", "text": "hi\n"}], "structuredContent": {"output": "hi\n", "truncated": false, "exit_code": 0, "wall_time_seconds": 0}}, "isError": false, "durationMs": 8}
+{"type": "message_start", "message": {"role": "toolResult", "toolCallId": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "toolName": "bash", "content": [{"type": "text", "text": "hi\n"}], "isError": false, "durationMs": 8, "timestamp": 1792440252874}}
+{"type": "message_end", "message": {"role": "toolResult", "toolCallId": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "toolName": "bash", "content": [{"type": "text", "text": "hi\n"}], "isError": false, "durationMs": 8, "timestamp": 1792440252874}}
+{"type": "turn_end", "message": {"role": "assistant", "content": [{"type": "thinking", "thinking": "This is simple - I'll run echo hi and then reply pong.\n\n"}, {"type": "toolCall", "id": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "name": "bash", "arguments": {"command": "echo hi", "timeout": 10}}], "api": "anthropic-messages", "provider": "anthropic", "model": "claude-opus-4-8", "stopReason": "toolUse", "timestamp": 1792440250192, "responseId": "msg_011CgCCGW83YMCvRLBxK9s6Z", "rawStopReason": "tool_use", "durationMs": 2672, "thinkingLevel": "high"}, "toolResults": [{"role": "toolResult", "toolCallId": "toolu_01ADzgs1aBPPrgLtSwfNuLw6", "toolName": "bash", "content": [{"type": "text", "text": "hi\n"}], "isError": false, "durationMs": 8, "timestamp": 1792440252874}]}
+{"type": "turn_start"}
+{"type": "message_start", "message": {"role": "assistant", "content": [{"type": "text", "text": "", "index": 0}], "api": "anthropic-messages", "provider": "anthropic", "model": "claude-opus-4-8", "stopReason": "pending", "timestamp": 1792440252879, "responseId": "msg_011CgCCGh3NEkAEPRmWgikcf"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "text_start", "contentIndex": 0}}
+{"type": "message_update", "assistantMessageEvent": {"type": "text_delta", "contentIndex": 0, "delta": "p"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "text_delta", "contentIndex": 0, "delta": "ong"}}
+{"type": "message_update", "assistantMessageEvent": {"type": "text_end", "contentIndex": 0, "content": "pong"}}
+{"type": "message_end", "message": {"role": "assistant", "content": [{"type": "text", "text": "pong"}], "api": "anthropic-messages", "provider": "anthropic", "model": "claude-opus-4-8", "stopReason": "stop", "timestamp": 1792440252879, "responseId": "msg_011CgCCGh3NEkAEPRmWgikcf", "rawStopReason": "end_turn", "durationMs": 655, "thinkingLevel": "high"}}
+{"type": "turn_end", "message": {"role": "assistant", "content": [{"type": "text", "text": "pong"}], "api": "anthropic-messages", "provider": "anthropic", "model": "claude-opus-4-8", "stopReason": "stop", "timestamp": 1792440252879, "responseId": "msg_011CgCCGh3NEkAEPRmWgikcf", "rawStopReason": "end_turn", "durationMs": 655, "thinkingLevel": "high"}, "toolResults": []}
+{"type": "agent_end", "willRetry": false}
+{"type": "agent_settled", "aborted": false}

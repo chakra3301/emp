@@ -1,0 +1,33 @@
+{
+  "name": "emp",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "tokens": "node scripts/gen-tokens.mjs",
+    "build": "npm run build -w @emp/ui && npm run build:singlefile -w @emp/ui",
+    "dev": "npm run dev -w @emp/desktop",
+    "check": "npm run typecheck && npm test && node scripts/gen-tokens.mjs --check && node scripts/gen-fonts.mjs --check && node scripts/check-sandbox.mjs && npm run build && node scripts/check-singlefile.mjs",
+    "fonts": "node scripts/gen-fonts.mjs",
+    "app": "bash scripts/install-app.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "react": "~19.2.9",
+    "react-dom": "~19.2.9",
+    "typescript": "~5.8.3",
+    "vite": "^7.3.7",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vitest": "^5.0.5",
+    "zustand": "^5.0.15"
+  },
+  "license": "Apache-2.0"
+}
